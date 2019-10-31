@@ -13,3 +13,11 @@ app.all("*", (req, res, next) => {
 app.get('/', (req, res) => {
     res.send('posta funcionando! =) ')
 })
+
+
+
+
+//servidor
+app.listen(port,function () {
+    console.log(`App rodando na porta${port}`)
+})
