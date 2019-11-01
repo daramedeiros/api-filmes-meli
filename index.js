@@ -29,7 +29,11 @@ app.get('/filmes/:diretor', (req, res) => {
     res.send(filmes.filter(filmes => filmes.director == nomeDiretor ))
 })
 
-
+//listar por genero
+app.get('/filmes/:genero', (req, res) => {
+    const genero = req.params.genero
+    res.send(filmes.filter(filmes.genre.includes(genero)))
+})
 
 
 //servidor
