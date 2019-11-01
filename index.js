@@ -30,9 +30,9 @@ app.get('/filmes/:diretor', (req, res) => {
 })
 
 //listar por genero
-app.get('/filmes/:genero', (req, res) => {
-    const genero = req.params.genero
-    res.send(filmes.filter(filmes.genre.includes(genero)))
+app.get('/filmes/genero/:nome', (req, res) => {
+    const genero = req.params.nome
+    res.send(filmes.filter(filme => filme.genre.indexOf(genero) > -1))
 })
 
 
