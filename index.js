@@ -4,6 +4,10 @@ const port = 3000
 const filmes = require('./filmes.json')
 
 
+app.use(express.json())
+
+
+
 //middleware
 app.all("*", (req, res, next) => {
     next()
@@ -33,6 +37,13 @@ app.get('/filmes/:diretor', (req, res) => {
 app.get('/filmes/genero/:nome', (req, res) => {
     const genero = req.params.nome
     res.send(filmes.filter(filme => filme.genre.indexOf(genero) > -1))
+})
+
+//criar um filme e salvar o resultado
+app.post('/filmes', (req, res) => {
+    const { title, year, director, duration, genre, rate } = req.body
+    filmes.push({ title, year, director, duration, genre, rate })
+    return res.status(201).send(filmes)
 })
 
 
