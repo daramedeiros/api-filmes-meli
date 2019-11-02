@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "661884c5-792d-4788-9b6d-ccd1e1af909c",
+		"name": "reprograma.Filmes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Filmes.porta",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filmes.listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/filmes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"filmes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filmes.inserir.filmes",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"title\": \"Elektra\",\r\n    \"year\": \"2005\",\r\n    \"director\": \"Rob Bowman\",\r\n    \"duration\": \"96min\",\r\n    \"genre\": [\r\n      \"Action\",\r\n      \"Adventure\",\r\n      \"Fantasy\",\r\n      \"Drama\"\r\n    ],\r\n    \"rate\": \"8.7\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/filmes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"filmes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filmes.diretor.nome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/filmes/Frank Darabont",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"filmes",
+						"Frank Darabont"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filmes.genero",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/filmes/genero/Fantasy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"filmes",
+						"genero",
+						"Fantasy"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
